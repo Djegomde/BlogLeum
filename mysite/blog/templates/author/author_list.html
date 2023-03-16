@@ -1,0 +1,37 @@
+<!-- @format -->
+
+{% extends 'accueil/layout.html' %} {% block content %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Numéro</th>
+      <th scope="col">Name</th>
+      <th scope="col">Firstname</th>
+      <th scope="col">Telephone</th>
+      <th scope="col">Photo</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    { % for authors_l in authors_l %}
+    <tr>
+      <th scope="row">{{authors_l.id}}</th>
+      <td>{{authors_l.name}}</td>
+      <td>{{authors_l.firstname}}</td>
+      <td>{{authors_l.telephone}}</td>
+      <td>
+        <img
+          src="{{ authors_l.photo_profil}}"
+          class="rounded-circle"
+          width="50"
+          higth="50"
+          alt="Photo Profil"
+        />
+      </td>
+      <td>Encours</td>
+    </tr>
+    { % endfor %}
+  </tbody>
+</table>
+{% endblock %}

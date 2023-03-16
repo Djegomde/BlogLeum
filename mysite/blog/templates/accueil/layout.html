@@ -1,0 +1,32 @@
+<!-- @format -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Djegomde Blog</title>
+    <link
+      rel="stylesheet"
+      href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header>{% include 'accueil/navbar.html' %}</header>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-8">{%block content%} {%endblock%}</div>
+        <div class="col-4">
+          <article class="article_recent">
+            <h3>Les articles recents</h3>
+          </article>
+        </div>
+      </div>
+      <div class="row"></div>
+    </div>
+  </body>
+  <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+</html>

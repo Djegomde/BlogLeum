@@ -1,0 +1,43 @@
+/** @format */
+
+.card-header {
+  color: whitesmoke;
+  background-color: blue;
+  font-family: "Lobster";
+  font-size: 30px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+header {
+  text-align: center;
+}
+
+.page-header {
+  background-color: #c25100;
+  margin: 0px 40px 40px 40px;
+  padding: 20px 20px 20px 40px;
+}
+
+#row1 {
+  top: 4px;
+  background-color: rgb(227, 214, 214);
+  height: 400px;
+}
+.test {
+  text-align: center;
+  color: rgb(230, 218, 209);
+}
+
+body {
+  background-color: rgb(223, 221, 221);
+}
+
+.article_recent {
+  height: 500px;
+  background-color: antiquewhite;
+}
+span {
+  border-right: 12px;
+  color: red;
+}

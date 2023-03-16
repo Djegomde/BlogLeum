@@ -1,25 +1,45 @@
+<!-- @format -->
+
+{% load static %}
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Hippo blog</title>
-    </head>
-    <body>
-        <header>
-            <h1><a href="#">DJEGOMDÉ Blog</a></h1>
-        </header>
-      
-        {% for post in posts %}
-        <article>
-           
-            <h2><a href="https://fr.wikipedia.org/wiki/Pand%C3%A9mie_de_Covid-19">{{ post.title }}</a></h2>
-            <time>published: {{ post.published_date }}</time>
-            <p>{{ post.text|linebreaksbr }}</p>
-        </article>
+  <head>
+    <title>Hippo blog</title>
+    <link
+      rel="stylesheet"
+      href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}" />
 
-      {% endfor %}
-    
-        <article>
-            
-        </article>
-    </body>
+    <link
+      href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <header class="page-header">
+      <h1><a href="#">Espace des Bloggeurs</a></h1>
+      <nav></nav>
+    </header>
+
+    {% for post in posts %}
+    <article>
+      <h2>
+        <a href="https://fr.wikipedia.org/wiki/Pand%C3%A9mie_de_Covid-19"
+          >{{ post.title }}</a
+        >
+      </h2>
+      <time>published: {{ post.published_date }}</time>
+      <p>{{ post.text|linebreaksbr }}</p>
+    </article>
+
+    {% endfor %}
+
+    <article>
+      <div>
+        <p></p>
+      </div>
+    </article>
+  </body>
 </html>
